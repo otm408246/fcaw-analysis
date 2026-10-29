@@ -3,7 +3,7 @@
 # Misma especificación G y mismos priors que modelo_03_todas_respuestas.R. No escribe en la carpeta del proyecto.
 suppressPackageStartupMessages({library(brms); library(readr); library(dplyr)})
 options(brms.backend = "cmdstanr", mc.cores = 4)
-# run from data/: cd data && Rscript ../code/modelo_05_gamma_sensibilidad.R
+# run from data/: cd data && Rscript ../code/3_models/modelo_05_gamma_sensibilidad.R
 IMPUTADOS <- c("03_Palani2006", "04_Palani2007", "07_Kumar2011")
 d0 <- read_csv("MODELADO.csv", show_col_types = FALSE) |>
   filter(!paper_id %in% IMPUTADOS, !is.na(WFS_TS), !is.na(TS_mm_s)) |>

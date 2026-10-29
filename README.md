@@ -20,7 +20,7 @@ A Spanish description of every file is in [`LEEME.md`](LEEME.md).
 | Folder | Content |
 |---|---|
 | `data/` | Master table (`FCAW_MAESTRA.csv`), modeling tables, full workbook (`FCAW_BASE_FINAL.xlsx`), OpenAlex search and screening records, model outputs |
-| `code/` | Python and R scripts: literature search, screening, consolidation, error floor, models `modelo_01`–`modelo_05` |
+| `code/` | Scripts in three stages: `1_search/`, `2_database/`, `3_models/` (see [`code/README.md`](code/README.md)) |
 
 The source PDFs are **not** included (copyright). Scripts that rebuild the database from the
 transcribed tables or query OpenAlex document the process; the models run from `data/` alone.
@@ -32,9 +32,9 @@ Requirements: R ≥ 4.5 with `brms`, `cmdstanr` (CmdStan 2.39), `tidyverse`; Pyt
 
 ```bash
 cd data
-Rscript ../code/modelo_01_ancho.R              # bead width, hierarchical model
-Rscript ../code/modelo_03_todas_respuestas.R   # six responses
-Rscript ../code/modelo_05_gamma_sensibilidad.R # log-normal vs gamma sensitivity
+Rscript ../code/3_models/modelo_01_ancho.R              # bead width, hierarchical model
+Rscript ../code/3_models/modelo_03_todas_respuestas.R   # six responses
+Rscript ../code/3_models/modelo_05_gamma_sensibilidad.R # log-normal vs gamma sensitivity
 ```
 
 Scripts that query OpenAlex read the key from `OPENALEX_API_KEY` and the contact e-mail from
