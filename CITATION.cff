@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Corpus consolidado de parámetros de proceso y geometría del cordón en soldadura FCAW"
+type: dataset
+authors:
+  - family-names: Torres-Mejía
+    given-names: Osvaldo
+    orcid: "https://orcid.org/0009-0002-9784-4340"
+    affiliation: "Instituto Politécnico Nacional, UPIICSA, SEPI"
+doi: 10.5281/zenodo.23441899
+date-released: 2026-10-17
+license: CC-BY-4.0
